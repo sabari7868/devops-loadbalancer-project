@@ -1,5 +1,4 @@
-FROM node:18
-WORKDIR /app
-COPY . .
-RUN npm install express
-CMD ["node", "server.js"]
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.send('Hello from App 2'));
+app.listen(3000);
